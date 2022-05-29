@@ -6,3 +6,5 @@ Module 2/Notebook/mlruns/*
 
 Module 2/Notebook/homework2.db
 Module 2/homework2.db
+.gitignore
+Module 1/notebooks/.ipynb_checkpoints/01-intro homework-checkpoint.ipynb
