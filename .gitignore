@@ -1,2 +1,8 @@
-*.ipynb_checkpoints
+*/.ipynb_checkpoints
 data
+output
+Module 2/Notebook/mlruns/1/5e24dc92b71041c0bcde01b95a1a49c3/artifacts/model/conda.yaml
+Module 2/Notebook/mlruns/*
+
+Module 2/Notebook/homework2.db
+Module 2/homework2.db
