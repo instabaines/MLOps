@@ -1,2 +1,2 @@
 # MLOps
-This contains week;y modules from MLOps Training by Ml-Zoomcamp
+This contains weekly modules from MLOps Training by Ml-Zoomcamp
