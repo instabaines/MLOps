@@ -8,3 +8,13 @@ Module 2/Notebook/homework2.db
 Module 2/homework2.db
 .gitignore
 Module 1/notebooks/.ipynb_checkpoints/01-intro homework-checkpoint.ipynb
+Module 3/data
+
+
+Module 3/scripts/mlflow.db
+Module 3/models/*
+Module 3/notebook/.prefect/*
+Module 3/scripts/.prefect/*
+Module 3/scripts/mlruns/*
+Module 3/homework/.prefect/*
+
