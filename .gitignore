@@ -18,3 +18,5 @@ Module 3/scripts/.prefect/*
 Module 3/scripts/mlruns/*
 Module 3/homework/.prefect/*
 
+models/lin_reg.bin
+Module 4/homework/model.bin
