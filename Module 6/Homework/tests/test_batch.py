@@ -3,7 +3,7 @@ from datetime import datetime
 import sys
 sys.path.append('..')
 
-from Homework.batch import preprare_data
+from Homework.batch import preprare_data,predict
 
 def dt(hour, minute, second=0):
     return datetime(2021, 1, 1, hour, minute, second)
@@ -16,8 +16,16 @@ data = [
 
 columns = ['PUlocationID', 'DOlocationID', 'pickup_datetime', 'dropOff_datetime']
 df = pd.DataFrame(data, columns=columns)
-
+input_file = './test.parquet'
 test = preprare_data(df,columns[:2])
-
-print (test)
+test.to_parquet(
+    input_file,
+    engine='pyarrow',
+    compression=None,
+    index=False,
+)
+dicts = test[columns[:2]].to_dict(orient='records')
+    
+y_pred=predict(dicts)
+print (sum(y_pred))
 assert len(test) == 2
