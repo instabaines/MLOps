@@ -35,3 +35,9 @@ Project/notebook/Machine_learning_xgb.ipynb
 Project/kserve
 Project/script/mlruns
 Project/notebook/Machine_learning_xgb.ipynb
+Project/infrenceservice/bash.yml
+Project/test_kserve/inference.yaml
+Project/kserve-sklearnserver:sales-3.9-1.0.2
+Project/model.joblib
+Project/notebook/Machine_learning_xgb.ipynb
+Project/model.pkl
