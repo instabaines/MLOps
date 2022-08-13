@@ -27,7 +27,6 @@ mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/model.pkl
 mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/python_env.yaml
 mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/requirements.txt
 
-Project/script/test.py
 
 Project/notebook/*.ipynb
 *.ipynb
