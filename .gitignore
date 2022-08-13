@@ -22,3 +22,16 @@ models/lin_reg.bin
 Module 4/homework/model.bin
 Project/script/__pycache__/prepare.cpython-39.pyc
 backend.db
+mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/conda.yaml
+mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/model.pkl
+mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/python_env.yaml
+mlruns/1/335a14418594457791e31019f16586f6/artifacts/models/requirements.txt
+
+Project/script/test.py
+
+Project/notebook/*.ipynb
+*.ipynb
+Project/notebook/Machine_learning_xgb.ipynb
+Project/kserve
+Project/script/mlruns
+Project/notebook/Machine_learning_xgb.ipynb

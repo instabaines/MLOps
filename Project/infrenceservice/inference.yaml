@@ -1,8 +1,9 @@
 apiVersion: "serving.kserve.io/v1beta1"
 kind: "InferenceService"
 metadata:
-  name: "sklearn-iris"
+  name: "sales-predictor"
 spec:
   predictor:
     sklearn:
-      storageUri: "gs://kfserving-examples/models/sklearn/iris"
+      image: kserve-sklearnserver:sales-3.8-1.0.2
+      storageUri: "http://192.168.23.104:8000/ed41f894c579425e9cbb5472e0018da3/artifacts/models/model.pkl"

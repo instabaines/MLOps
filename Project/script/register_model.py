@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 
-EXPERIMENT_NAME = "random_forest_experiment"
+EXPERIMENT_NAME = "random_forest_pipeline_experiment"
 
 mlflow.set_tracking_uri("sqlite:///backend.db")
 mlflow.set_experiment(EXPERIMENT_NAME)
@@ -33,7 +33,8 @@ def run(log_top=1):
     # register the best model
     run_id=best_run.info.run_id
     model_uri= f"runs:/{run_id}/model"
-    mlflow.register_model(model_uri=model_uri,name="random_forest_regressor")
+    mlflow.register_model(model_uri=model_uri,name="model")
+    print(run_id)
 
 
 if __name__ == '__main__':
