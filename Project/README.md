@@ -26,7 +26,7 @@ The model is deployed in two ways:
  -1 Self serving using Kserve
  -2 Webservice using docker and flask
 
- *-1 Self serving inference service*
+ ### -1 Self serving inference service
  A custom sklearn service is built by adapting the codes in the kserve repository 
   To do this, clone the repository and copy the sklearn.Dockerfile from inferenceservice folder in this repo to the kserve-master/python
   Build the docker image
@@ -37,7 +37,7 @@ The model is deployed in two ways:
   run python -m http.server
   This will give a webserve providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl
  
- *-2 Webservice using Flask and Docker*
+ ### -2 Webservice using Flask and Docker
  cd to webservice folder
  Build docker image using
     sudo docker build -t sales-prediction-service:v1 .
