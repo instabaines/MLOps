@@ -1,5 +1,5 @@
 */.ipynb_checkpoints
-data
+
 output
 Module 2/Notebook/mlruns/1/5e24dc92b71041c0bcde01b95a1a49c3/artifacts/model/conda.yaml
 Module 2/Notebook/mlruns/*
@@ -40,3 +40,12 @@ Project/kserve-sklearnserver:sales-3.9-1.0.2
 Project/model.joblib
 Project/notebook/Machine_learning_xgb.ipynb
 Project/model.pkl
+data/fhv_tripdata_2021-01.parquet
+data/fhv_tripdata_2021-02.parquet
+data/green_tripdata_2021-01.parquet
+data/green_tripdata_2021-02.parquet
+Project/webservice/__pycache__/predict.cpython-39.pyc
+model.pkl
+model.joblib
+.vscode/settings.json
+Project/kserve_sales_image.tar.gz
