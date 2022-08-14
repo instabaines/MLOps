@@ -26,25 +26,29 @@ The model is deployed in two ways:
  -1 Self serving using Kserve
  -2 Webservice using docker and flask
 
- ### -1 Self serving inference service
- A custom sklearn service is built by adapting the codes in the kserve repository 
-  To do this, clone the repository and copy the sklearn.Dockerfile from inferenceservice folder in this repo to the kserve-master/python
-  Build the docker image
-  Use the docker image with the inference.yaml provided in the imferencservice folder. 
-  A prebuilt docker image is provided in inference.yaml, this can be used as well. 
-  Adding the location of the model
-  Goto the directory with the model and 
+ ### Self serving inference service
+<p>A custom sklearn service is built by adapting the codes in the kserve repository (https://github.com/kserve/kserve). To do this, clone the repository and copy the sklearn.Dockerfile from inferenceservice folder in this repo to the kserve-master/python.</p>
+<p>Build the docker image. Use the docker image with the inference.yaml provided in the imferencservice folder. A prebuilt docker image is provided in inference.yaml, this can be used as well. 
+ #### Adding the location of the model to the inference yaml
+ <p>Goto the directory with the model and </p>
   run python -m http.server
-  This will give a webserve providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl
+ <p>This will give a webserver providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl </p>
  
- ### -2 Webservice using Flask and Docker
- <p>cd to webservice folder</p>
- <p>Build docker image using </p>
-    <p>sudo docker build -t sales-prediction-service:v1 .</p>
-<p>Run the image with:</p>
-    sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1 </p>
+ ### Webservice using Flask and Docker
+ cd to webservice folder
+ Build docker image using
+    sudo docker build -t sales-prediction-service:v1 .
+Run the image with:
+    sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1
     
-<p>Run the test with:</p>
-<p>change the local host in the url to your localhost address</p>
-    <p>run:</p>
-    <p>Python test.py</p>
+Run the test with:
+change the local host in the url to your localhost address
+    run:
+    Python test.py
+### Testing frame work
+<p> Pytest is used to developed an integration test for the dockerised webservice. The details can be found in the integration test folder. This can be run with run.sh file</p>
+
+### Alternatively
+The project can be run using the makefile in this project directory
+
+Thanks!
