@@ -38,13 +38,13 @@ The model is deployed in two ways:
   This will give a webserve providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl
  
  ### -2 Webservice using Flask and Docker
- cd to webservice folder
- Build docker image using
-    sudo docker build -t sales-prediction-service:v1 .
-Run the image with:
-    sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1
+ <p>cd to webservice folder</p>
+ <p>Build docker image using </p>
+    <p>sudo docker build -t sales-prediction-service:v1 .</p>
+<p>Run the image with:</p>
+    sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1 </p>
     
-Run the test with:
-change the local host in the url to your localhost address
-    run:
-    Python test.py
+<p>Run the test with:</p>
+<p>change the local host in the url to your localhost address</p>
+    <p>run:</p>
+    <p>Python test.py</p>
