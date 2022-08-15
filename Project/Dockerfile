@@ -5,7 +5,7 @@ RUN pip install -U pip
 WORKDIR /app
 COPY requirement.txt .
 RUN pip install -r requirement.txt
-COPY ["predict.py", "model.pkl" ,"/app/"]
+COPY ["webservice/predict.py", "webservice/model.pkl" ,"/app/"]
 
 
 
