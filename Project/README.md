@@ -13,10 +13,28 @@ Preprocess Data with Sklearn
 Build models with SKlearn pipelines
 Serialize models and serve it to a web interface with Flask
 
+# Run the project
+<p>Install the requirements in the project directory with </p>
+``` shell
+pip install -r requirement.txt
+```
+<p>Run the training scripts with:</p>
+``` shell
+Python train.py
+```
+<p>This will train the model and monitor the experiemnt. Prefect is configured to do this every 5 minutes. </p>
+<p>Register the model in mlflow model registry</p>
+``` shell
+Python register_model.py
+```
+This will register the model with the lowest error
+
 # Model Development
 The model is developed using Random forest regressor to predict the sales across multiple stores. 
 
-mlflow is used to montor the experiment and prefect is used as the workflow orchestration tool
+mlflow is used to montor the experiment and prefect is used as the workflow orchestration tool.
+
+
 
 
 
@@ -31,20 +49,28 @@ The model is deployed in two ways:
 <p>Build the docker image. Use the docker image with the inference.yaml provided in the imferencservice folder. A prebuilt docker image is provided in inference.yaml, this can be used as well. 
  #### Adding the location of the model to the inference yaml
  <p>Goto the directory with the model and </p>
+ ``` shell
   run python -m http.server
+  ```
  <p>This will give a webserver providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl </p>
  
  ### Webservice using Flask and Docker
  cd to webservice folder
  Build docker image using
+ ``` shell
     sudo docker build -t sales-prediction-service:v1 .
+ ```
 Run the image with:
+``` shell
     sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1
+```
     
 Run the test with:
 change the local host in the url to your localhost address
     run:
+``` shell
     Python test.py
+```
 ### Testing frame work
 <p> Pytest is used to developed an integration test for the dockerised webservice. The details can be found in the integration test folder. This can be run with run.sh file</p>
 
