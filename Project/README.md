@@ -63,7 +63,7 @@ The model is deployed in two ways:
  ```
 Run the image with:
 ``` shell
-    sudo docker run -it --rm -p 9696:96 sales-prediction-service:v1
+    sudo docker run -it --rm -p 9696:9696 sales-prediction-service:v1
 ```
     
 Run the test with:
