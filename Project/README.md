@@ -14,16 +14,17 @@ Build models with SKlearn pipelines
 Serialize models and serve it to a web interface with Flask
 
 # Run the project
-<p>Install the requirements in the project directory with </p>
+Install the requirements in the project directory with 
+
 ``` shell
 pip install -r requirement.txt
 ```
-<p>Run the training scripts with:</p>
+Run the training scripts with:
 ``` shell
 Python train.py
 ```
-<p>This will train the model and monitor the experiemnt. Prefect is configured to do this every 5 minutes. </p>
-<p>Register the model in mlflow model registry</p>
+This will train the model and monitor the experiemnt. Prefect is configured to do this every 5 minutes. 
+Register the model in mlflow model registry
 ``` shell
 Python register_model.py
 ```
