@@ -4,7 +4,12 @@ RUN pip install -U pip
 
 WORKDIR /app
 COPY requirement.txt .
+
+
 RUN pip install -r requirement.txt
+
+RUN pip3 install evidently
+
 COPY ["webservice/predict.py", "webservice/model.pkl" ,"/app/"]
 
 
