@@ -10,7 +10,7 @@ RUN pip install -r requirement.txt
 
 RUN pip3 install evidently
 
-COPY ["webservice/predict.py", "webservice/model.pkl" ,"/app/"]
+COPY ["webservice/preditcion service/predict.py", "webservice/predict//model.pkl" ,"/app/"]
 
 
 
