@@ -54,6 +54,7 @@ The model is deployed in two ways:
   run python -m http.server
   ```
  <p>This will give a webserver providing the content of the directory. Goto this link and copy the link to the model.pkl. Since kserve will not recognise the localhost address. On your terminal, enter ifconfig(linux) or ipconfig(windows) and copy your ip address. Replace the local host with this ip address and build the service using kubectl </p>
+ <p>Test script using the test.py script in /script. Remember to chaange the host address</p>
  
  ### Webservice using Flask and Docker
  
