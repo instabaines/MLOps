@@ -8,8 +8,7 @@ url =f'{actual_domain}/v1/models/{service_name}:predict'
 
 headers ={'Host':host}
 
-df=pd.read_csv('../data/raw/test.csv')
-df = df.merge(pd.read_csv('../data/raw/store.csv'),on='Store')
+
    
 request = {
     "instances":[
